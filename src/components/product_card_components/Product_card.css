@@ -1,0 +1,26 @@
+.product_card {
+    height: 400px;
+    min-width: 310px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.product_name {
+    color: black;
+}
+
+.product_img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.product_shop_btn {
+    font-size: 20px;
+    color: black;
+}

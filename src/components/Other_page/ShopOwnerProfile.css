@@ -1,0 +1,97 @@
+.shop_owner_profile {
+    background-color: cyan;
+    position: relative;
+}
+
+.shop_owner_profile_details {
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.shop_owner_profile_img_area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile_photo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.shop_owner_profile_description {
+    display: flex;
+    
+}
+
+.shop_owner_profile_description_left,
+.shop_owner_profile_description_right {
+    width: 50%;
+}
+
+.shop_owner_profile_description_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.shop_owner_profile_description_left .shop_name {
+    font-size: 40px;
+}
+
+.shop_owner_profile_description_left .shop_owner_name {
+    font-size: 35px;
+}
+
+.shop_owner_profile_description_left .shop_owner_address {
+    font-size: 30px;
+}
+
+.shop_owner_profile_description_right {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.follow, 
+.following {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.follow span:nth-child(1), 
+.following span:nth-child(1) {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.follow span:nth-child(2), 
+.following span:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.shop_owner_profile_contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.shop_owner_profile_contact .follow_btn,
+.shop_owner_profile_contact .contact_btn  {
+    width: 20%;
+    padding: 5px 0;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: yellowgreen;
+    border: none;
+}

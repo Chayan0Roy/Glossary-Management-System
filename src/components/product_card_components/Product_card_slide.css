@@ -1,0 +1,19 @@
+.product_card_slide {
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border-left: 20px solid cyan;
+    border-right: 20px solid cyan;
+    border-bottom: 20px solid cyan;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    background-color: cyan;
+}
+
+.product_card_slide::-webkit-scrollbar-track {
+    border-radius: 50px;
+}
+
+.product_card_slide::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+}

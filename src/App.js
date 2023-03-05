@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import Header from './components/header&footer/Header';
+import FrontPage from './components/pages/FrontPage';
+import CompanyList from './components/pages/CompanyList';
+import CompanyProductsList from './components/pages/CompanyProductsList';
+import ProductBuyPage from './components/pages/ProductBuyPage';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const getFrontPageData = (getCatagoryID) => {
+        setFPData(getCatagoryID);
+    }
+    const [FPData, setFPData] = useState();
+    
+    
+    const getCompanyListData = (getCompanyID) => {
+        setCLData(getCompanyID);
+    }
+    const [CLData, setCLData] = useState();
+    
+    return(
+        <div className="App">
+            <Header></Header>
+            <Routes>
+                <Route path='/' element={<FrontPage reciveFrontPageData = {getFrontPageData} sendCLValue = {CLData}/>} />
+                <Route path='companyList' element={<CompanyList reciveCompanyListData = {getCompanyListData} sendFPValue = {FPData}/>} />
+                {/* <Route path='companyProductsList' element={<CompanyProductsList sendValue = {CLData}/>} />
+                <Route path='productBuyPage' element={<ProductBuyPage />} /> */}
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
